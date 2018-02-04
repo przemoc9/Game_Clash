@@ -22,13 +22,6 @@ public class Arena {
         this.opponentArmy = new ArrayList<Warrior>();
     }
 
-    public ArrayList<Warrior> getMyArmy() {
-        return myArmy;
-    }
-
-    public ArrayList<Warrior> getOpponentArmy() {
-        return opponentArmy;
-    }
 
 
 
