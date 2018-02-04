@@ -49,6 +49,9 @@ public class Arena {
         this.rycerzyk = rycerzyk;
     }
 
+
+
+    
     Warrior palladynek = new Palladyn(200, 100, 60000, 0);
     Warrior piechurek = new Piechur(50, 30, 10000, 0);
     Warrior rycerzyk = new Rycerz(100, 50, 25000, 0);
