@@ -25,6 +25,7 @@ public class Arena {
 
 
 
+
     Warrior palladynek = new Palladyn(200, 100, 60000, 0);
     Warrior piechurek = new Piechur(50, 30, 10000, 0);
     Warrior rycerzyk = new Rycerz(100, 50, 25000, 0);
@@ -168,7 +169,7 @@ public void ChooseNameTeam(){
             return;
         }
         int choice;
-        System.out.println("~~RED TEAM ATTACK~~");
+        System.out.println("~~"+FirstNameTeam+" TEAM ATTACK~~");
         System.out.println("Choose warrior which is the best to attack... Let's go!");
         choice = scanner.nextInt();
 
@@ -191,7 +192,7 @@ public void ChooseNameTeam(){
         int atakujacy = this.myArmy.get(choice).attack();
         int atakowana = opponentArmy.get(secondchoice).healthValue();
 
-        System.out.println("The Red Team ATTACK!" + "\n" + myArmy.get(choice) + " hits " + opponentArmy.get(secondchoice) + " with power " + atakujacy);
+        System.out.println(FirstNameTeam+" Team ATTACK!" + "\n" + myArmy.get(choice) + " hits " + opponentArmy.get(secondchoice) + " with power " + atakujacy);
         opponentArmy.get(secondchoice).sethealthValue(atakowana - atakujacy);
         System.out.println(opponentArmy.get(secondchoice) + " have HP:" + opponentArmy.get(secondchoice).healthValue());
         if (opponentArmy.get(secondchoice).healthValue() < 0) {
@@ -206,7 +207,7 @@ public void ChooseNameTeam(){
             return;
         }
         int choice;
-        System.out.println("~~BLUE TEAM ATTACK~~");
+        System.out.println("~"+ SecondNameTeam+" TEAM ATTACK~~");
         System.out.println("Choose warrior which is the best to attack... Let's go!");
         choice = scanner.nextInt();
 
@@ -229,7 +230,7 @@ public void ChooseNameTeam(){
 
         int atakowana = this.myArmy.get(secondchoice).healthValue();
 
-        System.out.println("The Blue Team ATTACK!" + "\n" + opponentArmy.get(choice) + " hits " + myArmy.get(secondchoice) + " with power " + atakujacy);
+        System.out.println(SecondNameTeam+" Team ATTACK!" + "\n" + opponentArmy.get(choice) + " hits " + myArmy.get(secondchoice) + " with power " + atakujacy);
         myArmy.get(secondchoice).sethealthValue(atakowana - atakujacy);
         System.out.println(myArmy.get(secondchoice) + " have HP:" + myArmy.get(secondchoice).healthValue());
         if (myArmy.get(secondchoice).healthValue() < 0) {
